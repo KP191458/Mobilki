@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB74328023A57C2A0070ED27 /* MyPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74327F23A57C2A0070ED27 /* MyPlaces.swift */; };
+		EB74328223A57CE70070ED27 /* OrderPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74328123A57CE70070ED27 /* OrderPlace.swift */; };
 		EBE9A99B23A1954F00D44B1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9A99A23A1954F00D44B1F /* AppDelegate.swift */; };
 		EBE9A99D23A1954F00D44B1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9A99C23A1954F00D44B1F /* SceneDelegate.swift */; };
 		EBE9A99F23A1954F00D44B1F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9A99E23A1954F00D44B1F /* ContentView.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB74327F23A57C2A0070ED27 /* MyPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaces.swift; sourceTree = "<group>"; };
+		EB74328123A57CE70070ED27 /* OrderPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPlace.swift; sourceTree = "<group>"; };
 		EBE9A99723A1954F00D44B1F /* ParkingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE9A99A23A1954F00D44B1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBE9A99C23A1954F00D44B1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				EBE9A9A523A1955000D44B1F /* LaunchScreen.storyboard */,
 				EBE9A9A823A1955000D44B1F /* Info.plist */,
 				EBE9A9A223A1955000D44B1F /* Preview Content */,
+				EB74327F23A57C2A0070ED27 /* MyPlaces.swift */,
+				EB74328123A57CE70070ED27 /* OrderPlace.swift */,
 			);
 			path = ParkingApp;
 			sourceTree = "<group>";
@@ -267,9 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB74328223A57CE70070ED27 /* OrderPlace.swift in Sources */,
 				EBE9A99B23A1954F00D44B1F /* AppDelegate.swift in Sources */,
 				EBE9A99D23A1954F00D44B1F /* SceneDelegate.swift in Sources */,
 				EBE9A99F23A1954F00D44B1F /* ContentView.swift in Sources */,
+				EB74328023A57C2A0070ED27 /* MyPlaces.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
