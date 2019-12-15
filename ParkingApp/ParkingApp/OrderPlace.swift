@@ -16,7 +16,13 @@ struct OrderPlace: View {
                 Text("Kampus A").tag(1)
                 Text("Kampus B").tag(2)
             }
-            
+            .padding()
+            .frame(height: 100.0)
+            Image("Mapki").frame(width: 250.0, height: 250.0)
+            List {
+                /*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Content@*/Text("Content")/*@END_MENU_TOKEN@*/
+            }
+            .padding(.horizontal)
         }
         .padding(.horizontal)
     }
