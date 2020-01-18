@@ -10,6 +10,8 @@ import SwiftUI
 
 struct OrderPlace: View {
     @State var campus = "a";
+    @State var sector = "";
+    let places = Bundle.main.decode([Place].self, from: "places.json")
     
     var body: some View {
         VStack {
@@ -42,7 +44,7 @@ struct OrderPlace: View {
             
             if (campus == "a"){
                 HStack() {
-                    Button(action: {}) {
+                    Button(action: {self.sector = "I"}) {
                         Text(" I ")
                             .fontWeight(.regular)
                             .foregroundColor(Color.white)
@@ -52,7 +54,7 @@ struct OrderPlace: View {
                     }
                     .padding(.vertical)
                     Text(" ")
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Button(action: {self.sector = "II"}) {
                         Text(" II ")
                             .fontWeight(.regular)
                             .foregroundColor(Color.white)
@@ -61,7 +63,7 @@ struct OrderPlace: View {
                             .cornerRadius(/*@START_MENU_TOKEN@*/15.0/*@END_MENU_TOKEN@*/)
                     }
                     Text(" ")
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Button(action: {self.sector = "III"}) {
                         Text(" III ")
                             .fontWeight(.regular)
                             .foregroundColor(Color.white)
@@ -75,7 +77,7 @@ struct OrderPlace: View {
             
             if (campus == "b"){
                 HStack() {
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Button(action: {self.sector = "IV"}) {
                         Text(" IV ")
                             .fontWeight(.regular)
                             .foregroundColor(Color.white)
@@ -85,7 +87,7 @@ struct OrderPlace: View {
                     }
                     .padding(.vertical)
                     Text(" ")
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Button(action: {self.sector = "V"}) {
                         Text(" V ")
                             .fontWeight(.regular)
                             .foregroundColor(Color.white)
@@ -94,7 +96,7 @@ struct OrderPlace: View {
                             .cornerRadius(/*@START_MENU_TOKEN@*/15.0/*@END_MENU_TOKEN@*/)
                     }
                     Text(" ")
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Button(action: {self.sector = "VI"}) {
                         Text(" VI ")
                             .fontWeight(.regular)
                             .foregroundColor(Color.white)
@@ -107,7 +109,11 @@ struct OrderPlace: View {
             }
 
             List {
-                /*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Content@*/Text("Content")/*@END_MENU_TOKEN@*/
+                ForEach(places) {place in
+                    if (self.sector == place.sector){
+                        Text(place.name)
+                    }
+                }
             }
             .padding(.horizontal)
         }

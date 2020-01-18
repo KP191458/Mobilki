@@ -1,0 +1,42 @@
+[
+    {
+        "id": "EF1CC5BB-4785-4D8E-AB98-5FA4E00B6A66",
+        "sector": "I",
+        "name": "14",
+        "week": 1,
+        "weekend": 0,
+        "restrictions": ["HC"]
+    },
+    {
+        "id": "EDCD038C-036F-4C40-826F-61C88CD84DDD",
+        "sector": "I",
+        "name": "15",
+        "week": 0,
+        "weekend": 0,
+        "restrictions": []
+    },
+    {
+        "id": "36A7CC40-18C1-48E5-BCD8-3B42D43BEAEE",
+        "sector": "I",
+        "name": "16",
+        "week": 1,
+        "weekend": 1,
+        "restrictions": []
+    },
+    {
+        "id": "CFB8C2DB-3478-4A10-92FA-3D2A2D5324FB",
+        "sector": "II",
+        "name": "1",
+        "week": 1,
+        "weekend": 0,
+        "restrictions": []
+    },
+    {
+        "id": "8903A204-F5C1-4D5C-A0A1-5C0ECD27FDD7",
+        "sector": "III",
+        "name": "2",
+        "week": 0,
+        "weekend": 0,
+        "restrictions": []
+    }
+]

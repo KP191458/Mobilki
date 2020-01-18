@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB544A8B23D32806005BF52A /* places.json in Resources */ = {isa = PBXBuildFile; fileRef = EB544A8A23D32806005BF52A /* places.json */; };
+		EB544A8D23D32864005BF52A /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544A8C23D32864005BF52A /* Place.swift */; };
+		EB544A8F23D32A85005BF52A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB544A8E23D32A85005BF52A /* Helper.swift */; };
 		EB74328023A57C2A0070ED27 /* MyPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74327F23A57C2A0070ED27 /* MyPlaces.swift */; };
 		EB74328223A57CE70070ED27 /* OrderPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74328123A57CE70070ED27 /* OrderPlace.swift */; };
 		EBE9A99B23A1954F00D44B1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE9A99A23A1954F00D44B1F /* AppDelegate.swift */; };
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB544A8A23D32806005BF52A /* places.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = places.json; sourceTree = "<group>"; };
+		EB544A8C23D32864005BF52A /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		EB544A8E23D32A85005BF52A /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		EB74327F23A57C2A0070ED27 /* MyPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaces.swift; sourceTree = "<group>"; };
 		EB74328123A57CE70070ED27 /* OrderPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPlace.swift; sourceTree = "<group>"; };
 		EBE9A99723A1954F00D44B1F /* ParkingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +109,7 @@
 		EBE9A99923A1954F00D44B1F /* ParkingApp */ = {
 			isa = PBXGroup;
 			children = (
+				EB544A8A23D32806005BF52A /* places.json */,
 				EBE9A99A23A1954F00D44B1F /* AppDelegate.swift */,
 				EBE9A99C23A1954F00D44B1F /* SceneDelegate.swift */,
 				EBE9A99E23A1954F00D44B1F /* ContentView.swift */,
@@ -112,6 +119,8 @@
 				EBE9A9A223A1955000D44B1F /* Preview Content */,
 				EB74327F23A57C2A0070ED27 /* MyPlaces.swift */,
 				EB74328123A57CE70070ED27 /* OrderPlace.swift */,
+				EB544A8C23D32864005BF52A /* Place.swift */,
+				EB544A8E23D32A85005BF52A /* Helper.swift */,
 			);
 			path = ParkingApp;
 			sourceTree = "<group>";
@@ -249,6 +258,7 @@
 				EBE9A9A723A1955000D44B1F /* LaunchScreen.storyboard in Resources */,
 				EBE9A9A423A1955000D44B1F /* Preview Assets.xcassets in Resources */,
 				EBE9A9A123A1955000D44B1F /* Assets.xcassets in Resources */,
+				EB544A8B23D32806005BF52A /* places.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB74328223A57CE70070ED27 /* OrderPlace.swift in Sources */,
+				EB544A8F23D32A85005BF52A /* Helper.swift in Sources */,
 				EBE9A99B23A1954F00D44B1F /* AppDelegate.swift in Sources */,
 				EBE9A99D23A1954F00D44B1F /* SceneDelegate.swift in Sources */,
+				EB544A8D23D32864005BF52A /* Place.swift in Sources */,
 				EBE9A99F23A1954F00D44B1F /* ContentView.swift in Sources */,
 				EB74328023A57C2A0070ED27 /* MyPlaces.swift in Sources */,
 			);
