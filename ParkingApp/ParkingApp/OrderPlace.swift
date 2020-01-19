@@ -9,10 +9,11 @@
 import SwiftUI
 
 struct OrderPlace: View {
-    @State var campus = "a";
+    @State var campus = "";
     @State var sector = "";
-    let places = Bundle.main.decode([Place].self, from: "places.json")
-    
+    @ObservedObject var fetcher = ParkingFetcher();
+    //let places = Bundle.main.decode([Place].self, from: "places.json")
+   
     var body: some View {
         VStack {
             Text("Wybór miejsca").font(.title)
@@ -108,17 +109,65 @@ struct OrderPlace: View {
                 .padding()
             }
 
+            //NavigationLink(destination: Text("New Screen")) {
+            //    Text("Press me")
+            //}
+            
             List {
-                ForEach(places) {place in
+                ForEach(fetcher.places) {place in
                     if (self.sector == place.sector){
-                        Text(place.name)
+                        NavigationLink (destination: Text(place.name)){
+                            HStack {
+                                Text(place.name)
+                                Image(systemName: "hand.raised")
+                                Spacer()
+                                if ( place.week == 1 ) {
+                                    Image(systemName: "largecircle.fill.circle").foregroundColor(Color.green)
+                                } else {
+                                    Image(systemName: "largecircle.fill.circle").foregroundColor(Color.red)
+                                }
+                                Image(systemName: "largecircle.fill.circle").foregroundColor(Color.green)
+                            }
+                        }
                     }
                 }
             }
-            .padding(.horizontal)
+            
         }
         .padding()
-        
+    }
+    
+    
+}
+
+
+
+public class ParkingFetcher: ObservableObject {
+
+    @Published var places = [Place]()
+    
+    init(){
+        load()
+    }
+    
+    func load() {
+        let url = URL(string: "https://gist.githubusercontent.com/KP191458/d336d6af5a9fec5c57a951165b7ac1c0/raw")!
+    
+        URLSession.shared.dataTask(with: url) {(data,response,error) in
+            do {
+                if let d = data {
+                    let decodedLists = try JSONDecoder().decode([Place].self, from: d)
+                    DispatchQueue.main.async {
+                        self.places = decodedLists
+                    }
+                }else {
+                    print("No Data")
+                }
+            } catch {
+                print ("Error")
+            }
+            
+        }.resume()
     }
 }
 

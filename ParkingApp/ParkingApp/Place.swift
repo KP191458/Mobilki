@@ -16,4 +16,7 @@ struct Place: Codable, Equatable, Identifiable {
     var week: boolean_t
     var weekend: boolean_t
     var restrictions: [String]
+    
+    static let example = Place(id: UUID(), sector: "II", name:
+        "22", week: 1, weekend: 0, restrictions: [""])
 }
